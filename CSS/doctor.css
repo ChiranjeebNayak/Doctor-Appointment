@@ -1,0 +1,30 @@
+body {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.head {
+  width: 98%;
+  padding: 1%;
+  background-color: aqua;
+  text-align-last: center;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+  width: 70%;
+  border: 5px solid blue;
+  margin-left: 15%;
+  margin-top: 3%;
+  background-color: tomato;
+  text-align-last: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 1%;
+}
+p {
+  font-size: 1.8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+input {
+  width: 20%;
+  font-size: 1rem;
+}

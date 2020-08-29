@@ -1,0 +1,88 @@
+body {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.head {
+  width: 98%;
+  padding: 1%;
+
+  background-color: aqua;
+  text-align-last: center;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+p {
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+a {
+  color: white;
+}
+a ::content {
+  color: black;
+}
+.box1 {
+  float: left;
+  border: 5px solid blue;
+  background-color: red;
+  color: white;
+  width: 20%;
+  text-align-last: center;
+  padding: 1%;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+.box2 {
+  float: left;
+  border: 5px solid blue;
+  background-color: green;
+  color: white;
+  width: 20%;
+  text-align-last: center;
+  padding: 1%;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+.box3 {
+  float: left;
+  border: 5px solid blue;
+  background-color: violet;
+  color: white;
+  width: 20%;
+  text-align-last: center;
+  padding: 1%;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+@media screen and (max-width: 750px) {
+  .box1 {
+    border: 5px solid blue;
+    background-color: orangered;
+    color: white;
+    width: 50%;
+    text-align-last: center;
+    padding: 1%;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+  .box2 {
+    border: 5px solid blue;
+    background-color: rgb(19, 19, 20);
+    color: white;
+    width: 50%;
+    text-align-last: center;
+    padding: 1%;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+  .box3 {
+    border: 5px solid blue;
+    background-color: rgb(77, 10, 10);
+    color: white;
+    width: 50%;
+    text-align-last: center;
+    padding: 1%;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+}
