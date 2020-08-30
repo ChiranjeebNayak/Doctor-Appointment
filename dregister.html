@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Doctor Register</title>
-        <link rel="stylesheet" type="text/css" href="CSS/doctor.css">
-        <script href="js/doctor.js"></script>
-      </head>
-      <body>
-        <div class="head">Doctor Appointment</div>
-        <form>
-        <div class="container">
-          <p>Doctor Register</p>
-          <p>Name:<input type="text" class="inputbox" id="Name"></p>
-          <p>DOB:<input type="text" class="inputbox" id="DOB"></p>  
-          <p>Phone No.:<input type="text" class="inputbox" id="phone"></p>  
-          <p>Email ID:<input type="text" class="inputbox" id="email"></p>
-          <p>Clinic Name:<input type="text" class="inputbox" id="organisation"></p>
-          <p>Password:<input type="text" class="inputbox" id="password"></p>
-          <p>Re-Password:<input type="text" class="inputbox" id="repassword"></p>
-          <input type="button" value="Register">
-          <input type="button" value="Back" onclick="back()">
-        
-        </div></form>
-      
-    
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Register</title>
+    <link rel="stylesheet" type="text/css" href="CSS/doctor.css" />
+    <script type="text/javascript" src="JS/doctor.js"></script>
+  </head>
+  <body onload="resetSelection()">
+    <div class="head">Doctor Appointment</div>
+    <form>
+      <div class="container">
+        <p>Doctor Register</p>
+        <p>Name:<input type="text" class="inputbox" id="Name" /></p>
+        <p>DOB:<input type="date" class="inputbox" id="DOB" /></p>
+        <p>
+          Gender:
+          <select name="gender" id="gender" class="form-control">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </p>
+        <p>Phone No.:<input type="number" class="inputbox" id="phone" /></p>
+        <p>Email ID:<input type="email" class="inputbox" id="email" /></p>
+        <p>
+          State:
+          <select
+            id="countrySelect"
+            size="1"
+            onchange="makeSubmenu(this.value)"
+          >
+            <option value="" disabled selected>Choose State</option>
+            <option>Odisha</option>
+            <option>Maharashtra</option>
+            <option>Kerala</option>
+          </select>
+        </p>
+        <p>
+          City:
+          <select id="citySelect" size="1">
+            <option value="" disabled selected>Choose City</option>
+            <option></option>
+          </select>
+        </p>
+
+        <p>
+          Clinic Name:<input type="text" class="inputbox" id="organisation" />
+        </p>
+        <p>Password:<input type="password" class="inputbox" id="password" /></p>
+        <p>
+          Re-Password:<input type="password" class="inputbox" id="repassword" />
+        </p>
+        <input type="button" value="Register" />
+        <input type="button" value="Back" onclick="back()" />
+      </div>
+    </form>
+    <footer>
+      <p>Copyright © 2020 Doctor Inc. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
