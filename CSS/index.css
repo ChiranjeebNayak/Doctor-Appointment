@@ -3,8 +3,8 @@ body {
   padding: 0px 0px 0px 0px;
 }
 .head {
-  width: 98%;
-  padding: 1%;
+  width: 96%;
+  padding: 2%;
   background-color: aqua;
   text-align-last: center;
   font-size: 1.5rem;
@@ -43,7 +43,7 @@ a ::content {
   margin-left: 10%;
 }
 .box3 {
-  float: left;
+  display: inline-block;
   border: 5px solid blue;
   background-color: violet;
   color: white;
@@ -53,6 +53,14 @@ a ::content {
   margin-top: 15%;
   margin-left: 10%;
 }
+footer {
+  margin-top: 15%;
+  text-align: center;
+  padding: 0.5%;
+  background-color: rgb(48, 29, 100);
+  color: white;
+}
+
 @media screen and (max-width: 750px) {
   .box1 {
     border: 5px solid blue;
@@ -85,10 +93,4 @@ a ::content {
     margin-left: 25%;
   }
 }
-footer {
-  margin-top: 4.2%;
-  text-align: center;
-  padding: 0.5%;
-  background-color: rgb(48, 29, 100);
-  color: white;
-}
+
