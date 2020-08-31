@@ -12,15 +12,16 @@
     <form>
       <div class="container">
         <p>Patient Register</p>
-        <p>Name:<input type="text" class="inputbox" id="Name" /></p>
-        <p>DOB:<input type="text" class="inputbox" id="DOB" /></p>
-        <p>Phone No.:<input type="text" class="inputbox" id="phone" /></p>
-        <p>Email ID:<input type="text" class="inputbox" id="email" /></p>
-        <p>Password:<input type="text" class="inputbox" id="password" /></p>
+        <p>Name:<input type="text" class="inputbox" id="name" /></p>
+        <p>DOB:<input type="date" class="inputbox" id="dob" /></p>
+        <p>Phone No.:<input type="number" class="inputbox" id="phone" /></p>
+        <p>Email ID:<input type="email" class="inputbox" id="email" /></p>
+        <p>Password:<input type="password" class="inputbox" id="password" /></p>
         <p>
-          Re-Password:<input type="text" class="inputbox" id="repassword" />
+          Re-Password:<input type="password" class="inputbox" id="repassword" />
         </p>
-        <input type="button" value="Register" />
+
+        <input type="button" value="Register" onclick="return register()" />
         <input type="button" value="Back" onclick="back()" />
       </div>
     </form>
