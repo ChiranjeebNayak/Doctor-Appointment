@@ -12,11 +12,12 @@
     <form>
       <div class="container">
         <p>Doctor Register</p>
-        <p>Name:<input type="text" class="inputbox" id="Name" /></p>
-        <p>DOB:<input type="date" class="inputbox" id="DOB" /></p>
+        <p>Name:<input type="text" class="inputbox" id="name" /></p>
+        <p>DOB:<input type="date" class="inputbox" id="dob" /></p>
         <p>
           Gender:
           <select name="gender" id="gender" class="form-control">
+            <option value="" disabled selected>Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Others">Others</option>
@@ -46,13 +47,13 @@
         </p>
 
         <p>
-          Clinic Name:<input type="text" class="inputbox" id="organisation" />
+          Clinic Name:<input type="text" class="inputbox" id="clinic" />
         </p>
         <p>Password:<input type="password" class="inputbox" id="password" /></p>
         <p>
           Re-Password:<input type="password" class="inputbox" id="repassword" />
         </p>
-        <input type="button" value="Register" />
+        <input type="button" value="Register" onclick="return register()"/>
         <input type="button" value="Back" onclick="back()" />
       </div>
     </form>
