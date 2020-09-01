@@ -74,6 +74,7 @@ function register() {
     alert("please enter your city!!");
     return false;
   }
+  console.log(city)
   if (clinic == "") {
     alert("please enter your Clinic name else write 'NO' !!");
     return false;
@@ -89,5 +90,5 @@ function register() {
     alert("Your password is not matched!!");
     return false;
   }
-  window.location.href = "index.html";
+  window.location.href = "daccount.html";
 }

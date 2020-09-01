@@ -39,5 +39,5 @@ function register() {
     alert("Your password is not matched!!");
     return false;
   }
-  window.location.href="index.html";
+  window.location.href="paccount.html";
 }
