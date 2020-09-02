@@ -6,6 +6,35 @@
     <title>Doctor Register</title>
     <link rel="stylesheet" type="text/css" href="CSS/doctor.css" />
     <script type="text/javascript" src="JS/doctor.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDXEdlIMa_CKDX-TuFWqDwM2Y03kzXmRI0",
+    authDomain: "doctor-meet-c0ed3.firebaseapp.com",
+    databaseURL: "https://doctor-meet-c0ed3.firebaseio.com",
+    projectId: "doctor-meet-c0ed3",
+    storageBucket: "doctor-meet-c0ed3.appspot.com",
+    messagingSenderId: "577257539779",
+    appId: "1:577257539779:web:e495eca155df4ac8a87a76",
+    measurementId: "G-M4Q0X4WWPL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
   </head>
   <body onload="resetSelection()">
     <div class="head">Doctor Appointment</div>
