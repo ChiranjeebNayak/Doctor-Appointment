@@ -39,5 +39,50 @@ function register() {
     alert("Your password is not matched!!");
     return false;
   }
-  window.location.href="paccount.html";
+ 
+  firebase
+  .auth()
+  .createUserWithEmailAndPassword(email, pwd)
+  .then(function () {
+    //alert("sucessfully!!!");
+    firebase
+      .auth()
+      .currentUser.sendEmailVerification()
+      .then(function () {
+        firebase.auth().onAuthStateChanged(function (user) {
+          if (user) {
+            // User is signed in.
+            // alert(user.uid);
+            userId = user.uid;
+            // alert(userId);
+          } else {
+            // No user is signed in.
+          }
+        });
+        setTimeout(datastore, 2000);
+
+        alert(
+          "Email Verification Sent!!! please verify it and login.Have a good day!!!"
+        );
+        window.location.href = "patient.html";
+      });
+  })
+  .catch(function (error) {
+    //Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(error);
+
+    // ...
+  });
+}
+function datastore() {
+  const ref = firebase.database().ref();
+  let fname = $("#name").val();
+  let femail = $("#email").val();
+
+  ref.child("user/" + userId).set({
+    Name: fname,
+    Email: femail,
+  });
 }
