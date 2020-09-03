@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-</head>
-<body>
+    <link rel="stylesheet" type="text/CSS" href="CSS/daccount.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="head">
+      Doctor-Appointment
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'aboutus')" id="defaultOpen">About US</button>
+        <button class="tablinks" onclick="openCity(event, 'profile')">Profile</button>
+        <button class="tablinks" onclick="openCity(event, 'appointment')">Appointment</button>
+        <button class="tablinks" onclick="openCity(event, 'contact')">Contact US</button>
+      </div>
+      
+      <div id="aboutus" class="tabcontent">
+        <h3>About US</h3>
+        <p>About US is the capital city of England.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
+      </div>
+      
+      <div id="profile" class="tabcontent">
+        <h3>Profile</h3>
+        <p>Paris is the capital of France.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p> 
+      </div>
+      
+      <div id="appointment" class="tabcontent">
+        <h3>Appointment</h3>
+        <p>Tokyo is the capital of Japan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
+      </div>
+      <div id="contact" class="tabcontent">
+        <h3>Contact US</h3>
+        <p>Tokyo is the capital of Japan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
+        <p>Donec vel velit laoreet, tempor leo vel, fermentum orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc placerat ultricies justo in sagittis. Curabitur hendrerit velit eget tincidunt commodo. Integer vitae mi ornare, ultricies eros id, hendrerit arcu. Vivamus congue neque id aliquam volutpat. Nullam dapibus, nisi vel vehicula volutpat, lectus neque blandit neque, eu dignissim est risus et leo. Cras sit amet metus luctus elit tristique vulputate. Duis semper mi a est rutrum molestie. Mauris at massa vulputate metus finibus ultrices at nec dolor. Aliquam in orci at velit consectetur fringilla porttitor sed augue. Mauris porttitor leo non nulla gravida fringilla. Sed viverra, mauris a pellentesque egestas, elit turpis dapibus neque, sed tristique sapien risus eu nibh. Sed nec sapien sed risus luctus varius at at mauris.</p>
+    </div>
+      
+
     
-</body>
+  </body>
 </html>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
