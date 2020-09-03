@@ -6,6 +6,33 @@
     <title>Doctor</title>
     <link rel="stylesheet" type="text/css" href="CSS/patient.css" />
     <script typr="text/javascript" src="JS/patient.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDXEdlIMa_CKDX-TuFWqDwM2Y03kzXmRI0",
+    authDomain: "doctor-meet-c0ed3.firebaseapp.com",
+    databaseURL: "https://doctor-meet-c0ed3.firebaseio.com",
+    projectId: "doctor-meet-c0ed3",
+    storageBucket: "doctor-meet-c0ed3.appspot.com",
+    messagingSenderId: "577257539779",
+    appId: "1:577257539779:web:e495eca155df4ac8a87a76",
+    measurementId: "G-M4Q0X4WWPL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </head>
   <body>
     <div class="head">Patient-Login</div>
@@ -13,10 +40,74 @@
       <p>Patient-Login</p>
       <p>Email ID: <input type="text" id="email" /></p>
       <p>Password: <input type="password" id="password" /></p>
-      <input type="button" value="Login" />
+      <input type="button" value="Login" onclick="login()" />
       <input type="submit" value="Back" onclick="back()"/>
       <p><a href="password.html">Forget Password? </a></p>
       <p>New Patient? <a href="pregister.html">Register</a></p>
     </div>
   </body>
 </html>
+<script>
+var errorMessage;
+function login() {
+  var email = document.getElementById("email").value;
+  var psd = document.getElementById("password").value;
+
+  if (email == "") {
+    alert("Please Enter your Username");
+    // document.write("no name");
+    return false;
+  }
+  
+
+  if (psd == "") {
+    alert("Please Enter your Password");
+    // document.write("no name");
+    return false;
+  } else {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, psd)
+      .then(function () {
+        var user = firebase.auth().currentUser;
+         alert("login successful");
+
+      //  window.location.href = "home.html";
+        return true;
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        errorMessage = error.message;
+        // ...
+
+        alert(error);
+        hideLoad();
+        return false;
+      });
+  }
+}
+
+function resetpwd() {
+  var ui = document.getElementById("user").value;
+  var auth = firebase.auth();
+  var emailAddress = ui;
+
+  auth
+    .sendPasswordResetEmail(emailAddress)
+    .then(function () {
+      // Email sent.
+      alert("Reset password link sent to your mail.");
+    })
+    .catch(function (error) {
+      // An error happened.
+      alert(error);
+    });
+}
+
+
+
+
+
+
+</script>
