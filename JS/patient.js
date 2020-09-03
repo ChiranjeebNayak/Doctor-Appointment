@@ -1,13 +1,23 @@
+var name;
+var dob ;
+var phone;
+var email;
+var pwd;
+var repwd;
+var userId;
+
+
+
 function back() {
   window.history.go(-1);
 }
 function register() {
-  var name = document.getElementById("name").value;
-  var dob = document.getElementById("dob").value;
-  var phone = document.getElementById("phone").value;
-  var email = document.getElementById("email").value;
-  var pwd = document.getElementById("password").value;
-  var repwd = document.getElementById("repassword").value;
+   name = document.getElementById("name").value;
+   dob = document.getElementById("dob").value;
+   phone = document.getElementById("phone").value;
+   email = document.getElementById("email").value;
+   pwd = document.getElementById("password").value;
+   repwd = document.getElementById("repassword").value;
 
   if (name == "") {
     alert("please write your name!!");
@@ -64,7 +74,7 @@ function register() {
           alert(
             "Email Verification Sent!!! please verify it and login.Have a good day!!!"
           );
-          window.location.href = "patient.html";
+         
         });
     })
     .catch(function (error) {
@@ -78,18 +88,12 @@ function register() {
 }
 function datastore() {
   const ref = firebase.database().ref();
-  let fname = $("#name").val();
-  let femail = $("#email").val();
-  let fdob = $("#dob").val();
-  let fphone = $("#phone").val();
-
-  
-  
 
   ref.child("patients/" + userId).set({
-    Name: fname,
-    Email: femail,
-    Phone: fphone,
-    DOB: fdob,
+    Name: name,
+    Email: email,
+    Phone: phone,
+    DOB: dob,
   });
+   window.location.href = "patient.html";
 }
