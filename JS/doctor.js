@@ -1,16 +1,14 @@
-var name ;
-  var dob ;
-  var gender ;
-  var phone ;
-  var email ;
-  var state ;
-  var city ;
-  var clinic ;
-  var pwd ;
-  var repwd ;
-  var userId;
-
-  
+var name;
+var dob;
+var gender;
+var phone;
+var email;
+var state;
+var city;
+var clinic;
+var pwd;
+var repwd;
+var userId;
 
 function back() {
   window.history.go(-1);
@@ -47,16 +45,16 @@ function resetSelection() {
   document.getElementById("citySelect").selectedIndex = 0;
 }
 function register() {
-   name = document.getElementById("name").value;
-   dob = document.getElementById("dob").value;
-   gender = document.getElementById("gender").value;
-   phone = document.getElementById("phone").value;
-   email = document.getElementById("email").value;
-   state = document.getElementById("countrySelect").value;
-   city = document.getElementById("citySelect").value;
-   clinic = document.getElementById("clinic").value;
-   pwd = document.getElementById("password").value;
-   repwd = document.getElementById("repassword").value;
+  name = document.getElementById("name").value;
+  dob = document.getElementById("dob").value;
+  gender = document.getElementById("gender").value;
+  phone = document.getElementById("phone").value;
+  email = document.getElementById("email").value;
+  state = document.getElementById("countrySelect").value;
+  city = document.getElementById("citySelect").value;
+  clinic = document.getElementById("clinic").value;
+  pwd = document.getElementById("password").value;
+  repwd = document.getElementById("repassword").value;
   if (name == "") {
     alert("please write your name!!");
     return false;
@@ -104,60 +102,58 @@ function register() {
     return false;
   }
 
- // alert('hello');
+  // alert('hello');
   //window.location.href = "index.html";
 
-   firebase
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, pwd)
+    .then(function () {
+      //alert("sucessfully!!!");
+      firebase
         .auth()
-        .createUserWithEmailAndPassword(email, pwd)
+        .currentUser.sendEmailVerification()
         .then(function () {
-          //alert("sucessfully!!!");
-          firebase
-            .auth()
-            .currentUser.sendEmailVerification()
-            .then(function () {
-              firebase.auth().onAuthStateChanged(function (user) {
-                if (user) {
-                  // User is signed in.
-                  // alert(user.uid);
-                  userId = user.uid;
-                  // alert(userId);
-                } else {
-                  // No user is signed in.
-                }
-              });
+          firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+              // User is signed in.
+              // alert(user.uid);
+              userId = user.uid;
+              // alert(userId);
+            } else {
+              // No user is signed in.
+            }
+          });
 
-              
-              setTimeout(datastore, 2000);
+          setTimeout(datastore, 2000);
 
-              alert(
-                "Email Verification Sent!!! please verify it and login.Have a good day!!!"
-              );
-             // window.location.href = "index.html";
-            });
-        })
-        .catch(function (error) {
-          //Handle Errors here.
-         
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          alert(error);
+          alert(
+            "Email Verification Sent!!! please verify it and login.Have a good day!!!"
+          );
+          // window.location.href = "index.html";
+        });
+    })
+    .catch(function (error) {
+      //Handle Errors here.
 
-          // ...
-        }); 
-               
-};
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(error);
+
+      // ...
+    });
+}
 function datastore() {
   const ref = firebase.database().ref();
   ref.child("doctors/" + userId).set({
     Name: name,
     Email: email,
-    DOB:dob,
-    PHONE:phone, 
-    GENDER:gender,
-     STATE:state, 
-     CITY:city,
-      CLINIC:clinic
+    DOB: dob,
+    PHONE: phone,
+    GENDER: gender,
+    STATE: state,
+    CITY: city,
+    CLINIC: clinic,
   });
-  alert('hello');
+  window.location.href = "doctor.html";
 }
