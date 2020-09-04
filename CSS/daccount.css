@@ -25,7 +25,7 @@ p {
 .tab {
   float: left;
   background-color: rgb(119, 132, 136);
-  width: 30%;
+  width: 20%;
   height: 100%;
   position: fixed;
 }
@@ -61,9 +61,9 @@ p {
 .tabcontent {
   float: left;
   border: 1px solid #ccc;
-  width: 70%;
+  width: 80%;
   padding: 1%;
-  margin-left: 30%;
+  margin-left: 20%;
   z-index: -1;
 }
 .image1 {
