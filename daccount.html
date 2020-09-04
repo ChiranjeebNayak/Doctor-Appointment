@@ -5,41 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/CSS" href="CSS/daccount.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="head">
-      Doctor-Appointment
-    </div>
+ 
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'aboutus')" id="defaultOpen">About US</button>
+        <img class="logo" src="IMG/logo2.png"><p class="brand">Doctor Meet</p>
+        <button class="tablinks" onclick="openCity(event, 'appointment')" id="defaultOpen">Appointment</button>
         <button class="tablinks" onclick="openCity(event, 'profile')">Profile</button>
-        <button class="tablinks" onclick="openCity(event, 'appointment')">Appointment</button>
-        <button class="tablinks" onclick="openCity(event, 'contact')">Contact US</button>
+        <button class="tablinks" onclick="openCity(event, 'faq')">FAQ</button>
+        <button class="tablinks" onclick="openCity(event, 'logout')">Logout</button>
+        <button class="tablinks" onclick="openCity(event, 'aboutus')">About US</button>
       </div>
-      
-      <div id="aboutus" class="tabcontent">
-        <h3>About US</h3>
-        <p>About US is the capital city of England.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
+      <div id="appointment" class="tabcontent">
+        <div class="head">
+            Doctor-Appointment
+          </div>
+        <h1>Appointment</h1>
+        <table>
+            <thead>
+                <td>Sl No.</td>
+                <td>Patient Name</td>
+                <td>Gender</td>
+                <td>Action</td>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>Chiranjeeb Nayak</td>
+                <td>M</td>
+                <td><button>Action</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Abhisek Kumar</td>
+                <td>M</td>
+                <td><button>Action</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Arohi</td>
+                <td>F</td>
+                <td><button>Action</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Chiranjeeb Nayak</td>
+                <td>M</td>
+                <td><button>Action</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Abhisek Kumar</td>
+                <td>M</td>
+                <td><button>Action</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Arohi</td>
+                <td>F</td>
+                <td><button>Action</button></td>
+            </tr>
+ 
+        </table>
       </div>
-      
+
       <div id="profile" class="tabcontent">
-        <h3>Profile</h3>
+        <div class="head">
+            Doctor-Appointment
+          </div>
+        <h1>Profile</h1>
         <p>Paris is the capital of France.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p> 
       </div>
-      
-      <div id="appointment" class="tabcontent">
-        <h3>Appointment</h3>
+      <div id="faq" class="tabcontent">
+        <div class="head">
+            Doctor-Appointment
+          </div>
+        <h1>FAQ</h1>
         <p>Tokyo is the capital of Japan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
-      </div>
-      <div id="contact" class="tabcontent">
-        <h3>Contact US</h3>
+
+    </div>
+      <div id="logout" class="tabcontent">
+        <div class="head">
+            Doctor-Appointment
+          </div>
+        <h1>Logout</h1>
         <p>Tokyo is the capital of Japan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
-        <p>Donec vel velit laoreet, tempor leo vel, fermentum orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc placerat ultricies justo in sagittis. Curabitur hendrerit velit eget tincidunt commodo. Integer vitae mi ornare, ultricies eros id, hendrerit arcu. Vivamus congue neque id aliquam volutpat. Nullam dapibus, nisi vel vehicula volutpat, lectus neque blandit neque, eu dignissim est risus et leo. Cras sit amet metus luctus elit tristique vulputate. Duis semper mi a est rutrum molestie. Mauris at massa vulputate metus finibus ultrices at nec dolor. Aliquam in orci at velit consectetur fringilla porttitor sed augue. Mauris porttitor leo non nulla gravida fringilla. Sed viverra, mauris a pellentesque egestas, elit turpis dapibus neque, sed tristique sapien risus eu nibh. Sed nec sapien sed risus luctus varius at at mauris.</p>
+
+    </div>
+
+    <div id="aboutus" class="tabcontent">
+        <div class="head">
+            Doctor-Appointment
+          </div>
+        
+        <img class="image1" src="IMG/logo1.jpg">
+        <p>About US is the capital city of England.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
     </div>
       
-
-    
+   
   </body>
 </html>
 <script>
