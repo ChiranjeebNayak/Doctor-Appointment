@@ -42,7 +42,7 @@
       <p>Doctor Login</p>
       <p>Email ID: <input type="email" id="email" /></p>
       <p>Password: <input type="password" id="password" /></p>
-      <p><a href="password.html">Forget Password? </a></p>
+      <p><button onclick="resetpwd()">Forget Password? </button></p>
       <input type="button" value="Login" onclick="login()" />
       <input type="submit" value="Back" onclick="back()" />
       <p>New Doctor? <a href="dregister.html">Register</a></p>
@@ -76,7 +76,7 @@ function login() {
       .signInWithEmailAndPassword(email, psd)
       .then(function () {
         var user = firebase.auth().currentUser;
-         alert("login successful");
+         window.location.href="daccount.html"
 
       //  window.location.href = "home.html";
         return true;
@@ -88,7 +88,7 @@ function login() {
         // ...
 
         alert(error);
-        hideLoad();
+       
         return false;
       });
   }
