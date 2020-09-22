@@ -1,124 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/CSS" href="CSS/daccount.css"></link>
-  </head>
-  <body>
- 
-    <div class="tab">
-        <img class="logo" src="IMG/logo2.png"><p class="brand">Doctor Meet</p>
-        <button class="tablinks" onclick="openCity(event, 'appointment')" id="defaultOpen">Appointment</button>
-        <button class="tablinks" onclick="openCity(event, 'profile')">Profile</button>
-        <button class="tablinks" onclick="openCity(event, 'faq')">FAQ</button>
-        <button class="tablinks" onclick="openCity(event, 'logout')">Logout</button>
-        <button class="tablinks" onclick="openCity(event, 'aboutus')">About US</button>
-      </div>
-      <div id="appointment" class="tabcontent">
-        <div class="head">
-            Doctor-Appointment
-          </div>
-        <h1>Appointment</h1>
-        <table>
-            <thead>
-                <td>Sl No.</td>
-                <td>Patient Name</td>
-                <td>Gender</td>
-                <td>Action</td>
-            </thead>
-            <tr>
-                <td>1</td>
-                <td>Chiranjeeb Nayak</td>
-                <td>M</td>
-                <td><button>Action</button></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Abhisek Kumar</td>
-                <td>M</td>
-                <td><button>Action</button></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Arohi</td>
-                <td>F</td>
-                <td><button>Action</button></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Chiranjeeb Nayak</td>
-                <td>M</td>
-                <td><button>Action</button></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Abhisek Kumar</td>
-                <td>M</td>
-                <td><button>Action</button></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Arohi</td>
-                <td>F</td>
-                <td><button>Action</button></td>
-            </tr>
- 
-        </table>
-      </div>
-
-      <div id="profile" class="tabcontent">
-        <div class="head">
-            Doctor-Appointment
-          </div>
-        <h1>Profile</h1>
-        <p>Paris is the capital of France.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p> 
-      </div>
-      <div id="faq" class="tabcontent">
-        <div class="head">
-            Doctor-Appointment
-          </div>
-        <h1>FAQ</h1>
-        <p>Tokyo is the capital of Japan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D-Meet</title>
+  <link rel="stylesheet" href="CSS/daccount.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header id="home">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="font-family: 'Poppins', sans-serif;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-transform" href="#">
+      <img src="IMG/logo2.png" width="40" height="40" alt="" loading="lazy" class="mr-2">
+      D-Meet</a>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home"> <i class="fa fa-home mr-1" aria-hidden="true"></i>Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="appointment.html"><i class="fa fa-medkit mr-1" aria-hidden="true"></i> Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dprofile.html"> <i class="fa fa-user mr-1" aria-hidden="true"></i> Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dcontact.html"><i class="fa fa-phone-square mr-1" aria-hidden="true"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dfaq.html"><i class="fa fa-question-circle mr-1" aria-hidden="true"></i> FAQ</a>
+        </li>
+        <button type="button" class="btn btn-warning ml-4"><i class="fa fa-sign-out"></i>Logout</button>
+      </ul>
     </div>
-      <div id="logout" class="tabcontent">
-        <div class="head">
-            Doctor-Appointment
+  </nav>
+  <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://source.unsplash.com/1600x800/?Tourism"
+              alt="Los Angeles"
+              width="1600"
+              height="610"
+            />
+            <div class="carousel-caption">
+              <h3>Jammu Kashmir</h3>
+              <p>We had such a great time in JK!</p>
+            </div>
           </div>
-        <h1>Logout</h1>
-        <p>Tokyo is the capital of Japan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
-
-    </div>
-
-    <div id="aboutus" class="tabcontent">
-        <div class="head">
-            Doctor-Appointment
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1600x800/?Tourism,mumbai"
+            alt="Chicago" width="1600" height=610" />
+            <div class="carousel-caption">
+              <h3>Mumbai</h3>
+              <p>Thank you, Mumbai!</p>
+            </div>
           </div>
-        
-        <img class="image1" src="IMG/logo1.jpg">
-        <p>About US is the capital city of England.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit turpis ut purus luctus, nec euismod mauris fringilla. Sed commodo ante vitae ligula cursus lacinia. Pellentesque sit amet tortor nec lectus consectetur pretium. Nulla eleifend cursus efficitur. Nam cursus ac neque eu congue. Sed hendrerit velit placerat accumsan tristique. Mauris facilisis urna et lectus bibendum pulvinar. Etiam elementum diam sed eleifend faucibus. Aliquam elementum sapien vitae laoreet feugiat. Aliquam nec nulla ut diam consequat dapibus. Fusce sit amet lacus ac felis consequat hendrerit ac quis odio. Nam ut nibh quis ligula efficitur cursus. Vivamus sodales elit vitae dolor dapibus varius. Curabitur quis ligula velit. Ut pellentesque tempus sollicitudin. In tortor magna, malesuada eget dignissim convallis, lobortis at augue.</p>
-    </div>
-      
-   
-  </body>
+          <div class="carousel-item">
+            <img
+              src="https://source.unsplash.com/1600x800/?Tourism,Banglore"
+              alt="New York"
+              width="1600"
+              height="610"
+            />
+            <div class="carousel-caption">
+              <h3>Maharastra</h3>
+              <p>We love the Maharastra!</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+</header>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
 </html>
-<script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    </script>
