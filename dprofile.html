@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDXEdlIMa_CKDX-TuFWqDwM2Y03kzXmRI0",
+    authDomain: "doctor-meet-c0ed3.firebaseapp.com",
+    databaseURL: "https://doctor-meet-c0ed3.firebaseio.com",
+    projectId: "doctor-meet-c0ed3",
+    storageBucket: "doctor-meet-c0ed3.appspot.com",
+    messagingSenderId: "577257539779",
+    appId: "1:577257539779:web:e495eca155df4ac8a87a76",
+    measurementId: "G-M4Q0X4WWPL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 </head>
 <body>
    <header>
@@ -89,7 +115,7 @@
                               <div class="col">
                                 <div class="form-group">
                                   <label>Full Name</label>
-                                  <input class="form-control" type="text" name="name" placeholder="John Smith" value="John Smith">
+                                  <input id="fName" class="form-control" type="text" name="name" placeholder="John Smith" value="John Smith">
                                 </div>
                               </div>
                               <div class="col">
@@ -103,7 +129,7 @@
                               <div class="col">
                                 <div class="form-group">
                                   <label>Email</label>
-                                  <input class="form-control" type="text" placeholder="user@example.com">
+                                  <input id="email" class="form-control" type="text" placeholder="user@example.com">
                                 </div>
                               </div>
                             </div>
@@ -151,3 +177,34 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+<script>
+
+$(document).ready(function(){
+  readData();
+});
+
+function readData() {
+  var database = firebase.database();
+  var id ="Ij9mqcPtWPNzUZTZV2LjH2ROsZD2";
+  database.ref("doctors/" + id).once("value", function (snapshot) {
+    if (snapshot.exists()) {
+     
+  
+      var val = snapshot.val();
+      var fname = val.Name;
+      var email = val.Email;
+
+    $("#fname").val(fname);
+    $("#email").value=email;
+    //  document.getElementById("fname").value;
+    //  document.getElementById("email").value = email;
+      console.log(fname);
+      console.log(email);
+ 
+
+      
+    }
+  });
+
+}
+</script>
