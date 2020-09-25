@@ -91,10 +91,35 @@
                         <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
                         <p class="mb-0">@johnny.s</p>
                         <div class="mt-2">
-                          <button class="btn btn-primary" type="button">
-                            <i class="fa fa-fw fa-camera"></i>
-                            <span>Change Photo</span>
-                          </button>
+                          <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <i class="fa fa-camera" aria-hidden="true"></i>
+  <span>Change Photo</span>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="img">Select image:</label>
+          <input type="file" id="img" name="img" accept="image/*">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
                         </div>
                       </div>
                       <div class="text-center text-sm-right">
@@ -115,13 +140,13 @@
                               <div class="col">
                                 <div class="form-group">
                                   <label>Full Name</label>
-                                  <input id="fName" class="form-control" type="text" name="name" placeholder="John Smith" value="John Smith">
+                                  <input id="fName" class="form-control" type="text" name="name" placeholder="Full Name">
                                 </div>
                               </div>
                               <div class="col">
                                 <div class="form-group">
-                                  <label>Username</label>
-                                  <input class="form-control" type="text" name="username" placeholder="johnny.s" value="johnny.s">
+                                  <label>Phone No.</label>
+                                  <input class="form-control" type="text" name="Phone" id="Phone" placeholder="Phone number">
                                 </div>
                               </div>
                             </div>
@@ -129,7 +154,15 @@
                               <div class="col">
                                 <div class="form-group">
                                   <label>Email</label>
-                                  <input id="email" class="form-control" type="text" placeholder="user@example.com">
+                                  <input id="Email" class="form-control" type="text" placeholder="user@example.com">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col mb-3">
+                                <div class="form-group">
+                                  <label>Clinic Name</label>
+                                  <input id="Clinic" class="form-control" type="text" placeholder="Clinic Name">
                                 </div>
                               </div>
                             </div>
@@ -141,6 +174,7 @@
                                 </div>
                               </div>
                             </div>
+
                           </div>
                         </div>
                         <div class="row">
@@ -193,18 +227,20 @@ function readData() {
       var val = snapshot.val();
       var fname = val.Name;
       var email = val.Email;
-
-    $("#fname").val(fname);
-    $("#email").value=email;
-    //  document.getElementById("fname").value;
-    //  document.getElementById("email").value = email;
+      var phone= val.PHONE;
+      var clinic = val.CLINIC;
+      document.getElementById("fName").value=fname;
+      document.getElementById("Email").value = email;
+      document.getElementById("Phone").value = phone;
+      document.getElementById("Clinic").value = clinic;
       console.log(fname);
       console.log(email);
- 
-
+      console.log(phone);
+    
       
     }
   });
 
 }
+
 </script>
