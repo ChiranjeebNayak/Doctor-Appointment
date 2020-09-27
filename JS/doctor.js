@@ -154,6 +154,7 @@ function datastore() {
     STATE: state,
     CITY: city,
     CLINIC: clinic,
+    Dp:null;
   });
   window.location.href = "doctor.html";
 }

@@ -82,7 +82,7 @@
                     <div class="col-12 col-sm-auto mb-3">
                       <div class="mx-auto" style="width: 140px;">
                         <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                          <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                          <image id="doctorDp" height='140' width='140' style="color: rgb(166, 168, 170); font: bold 8pt Arial;"></image>
                         </div>
                       </div>
                     </div>
@@ -229,10 +229,13 @@ function readData() {
       var email = val.Email;
       var phone= val.PHONE;
       var clinic = val.CLINIC;
+      var img = val.Dp;
       document.getElementById("fName").value=fname;
       document.getElementById("Email").value = email;
       document.getElementById("Phone").value = phone;
       document.getElementById("Clinic").value = clinic;
+      if(img != null)
+      $("#doctorDp"). attr("src", img);
       console.log(fname);
       console.log(email);
       console.log(phone);
